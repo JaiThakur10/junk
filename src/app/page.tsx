@@ -129,11 +129,12 @@ const sectionOrder = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4">
-      <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg p-6">
-        <h1 className="text-4xl text-black font-bold text-center mb-6">
+    <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg p-4 sm:p-6">
+        <h1 className="text-3xl sm:text-4xl text-black font-bold text-center mb-8">
           My Projects & Quotes
         </h1>
+
         {sectionOrder.map((section) => {
           const filteredProjects = projects.filter(
             (p) => p.category === section
@@ -142,20 +143,20 @@ export default function ProjectsPage() {
 
           return (
             <div key={section} className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">
                 {section}
               </h2>
               <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200 text-sm text-left">
+                <table className="min-w-[600px] w-full divide-y divide-gray-200 text-sm text-left">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 font-semibold text-gray-700">
+                      <th className="px-4 py-3 sm:px-6 font-semibold text-gray-700">
                         Project
                       </th>
-                      <th className="px-6 py-3 font-semibold text-gray-700">
+                      <th className="px-4 py-3 sm:px-6 font-semibold text-gray-700">
                         Quote (₹)
                       </th>
-                      <th className="px-6 py-3 font-semibold text-gray-700">
+                      <th className="px-4 py-3 sm:px-6 font-semibold text-gray-700">
                         Description
                       </th>
                     </tr>
@@ -163,7 +164,7 @@ export default function ProjectsPage() {
                   <tbody className="divide-y divide-gray-200 bg-white">
                     {filteredProjects.map((project, idx) => (
                       <tr key={idx} className="hover:bg-gray-50 transition">
-                        <td className="px-6 py-4 text-blue-600 hover:underline">
+                        <td className="px-4 py-4 sm:px-6 text-blue-600 hover:underline">
                           <a
                             href={project.link}
                             target="_blank"
@@ -172,10 +173,10 @@ export default function ProjectsPage() {
                             {project.name}
                           </a>
                         </td>
-                        <td className="px-6 py-4 text-green-600 font-semibold">
+                        <td className="px-4 py-4 sm:px-6 text-green-600 font-semibold">
                           ₹{project.quote.toLocaleString()}
                         </td>
-                        <td className="px-6 py-4 text-gray-700">
+                        <td className="px-4 py-4 sm:px-6 text-gray-700">
                           {project.description}
                         </td>
                       </tr>
