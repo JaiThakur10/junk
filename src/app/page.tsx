@@ -36,6 +36,15 @@ const projects = [
       "Dr. Tara, a gynecologist at JJ Hospital Mumbai, required a professional portfolio website to highlight her services and facilitate online appointment bookings. I developed a modern, responsive site with engaging animations and a user-friendly booking system.",
     category: "Current Projects",
   },
+
+  {
+    name: "Rhidya Gupta",
+    link: "https://rhidyagupta.in",
+    quote: 15000,
+    description:
+      "Rhidya Gupta, a digital marketing expert, needed a professional portfolio website to showcase her skills and services. The site features a modern design with smooth animations and a contact form for inquiries.",
+    category: "Current Projects",
+  },
   {
     name: "Sum-Ri",
     link: "https://treatofood.com",
